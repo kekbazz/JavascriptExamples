@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nodejs code</title>
+  <script></script>
+</head>
+<body>
+  <nav>
+		<a href="./index.html"><b>Home</b></a>
+		<a href="./about.html">About</a>
+	</nav>
+  <h1>Home</h1>
+  <p id="dateStuff"></p>
+  <script>
+    /*
+    var theDate = new Date();
+    var year = theDate.getFullYear();
+    var month = theDate.getMonth();
+    var day = theDate.getDay();
+    todayz = year + ' ' + month + ' ' + day;
+
+    todayz1 = theDate.getDate();
+    document.getElementById("dateStuff").innerHTML = todayz1;*/
+
+    /*
+    Symmetric encryption uses a single key that needs to be 
+    shared among the people who need to receive the message.
+
+    Asymmetric encryption uses a pair of public key 
+    and a private key to encrypt and decrypt messages when 
+    communicating.
+    */
+    var key="";
+    var plainText="";
+    var cipherText="";
+    key = "F";
+    plainText = "Ricardo";//["R","i","c","a","r","d","o"];
+    document.writeln("Data: ",key.toString());
+    document.writeln("<br />");
+    document.writeln("Plain Text Data: ",plainText.toString());
+    document.writeln("<br />");
+    document.writeln("Plain Text Length: ",plainText.length);
+
+    //cipherText = plainText.charAt(1);
+
+    
+    for(let i=0; i<=plainText.length; i++){
+      //cipherText += plainText.charAt(i) ^ (parseInt(key) + i) % 5;
+      cipherText += plainText.charCodeAt(i) ^ (parseInt(key.charCodeAt(0)) + i) % 5;
+    }
+    
+    document.writeln("<br />");
+    document.writeln("Encrypted: ",cipherText);
+  </script>
+</body>
+</html>
+

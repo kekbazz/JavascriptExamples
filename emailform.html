@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testing Magick</title>
+    <link rel="icon" href="" type="image/x-icon"/>
+    <link href="css/YOURcssFILEgoesHERE" rel="stylesheet">
+    <script type="text/javascript">
+      function validate(){
+      
+        if(document.getElementById('name').value==""){
+          //alert( "Please Enter Your Password" );
+          document.getElementById("name").style.border="2px solid red";
+          return false;
+        }
+        
+        if(document.getElementById('email').value==""){
+          //alert( "Please Enter Your Password" );
+          document.getElementById("email").style.border="2px solid red";
+          return false;
+        }
+
+        if(document.getElementById('date').value==""){
+          //alert( "Please Enter Your Password" );
+          document.getElementById("date").style.border="2px solid red";
+          return false;
+        }
+        
+        if(document.getElementById('time').value==""){
+          //alert( "Please Enter Your Password" );
+          document.getElementById("time").style.border="2px solid red";
+          return false;
+        }        
+
+        if(document.getElementById('location').value==""){
+          //alert( "Please Enter Your Password" );
+          document.getElementById("location").style.border="2px solid red";
+          return false;
+        }
+        
+        if(document.getElementById('phone').value==""){
+          //alert( "Please Enter Your Password" );
+          document.getElementById("phone").style.border="2px solid red";
+          return false;
+        }
+        
+      }
+
+      document.onmousedown=disableclick;
+      status="Right Click Disabled";
+      function disableclick(event){
+        if(event.button==2){
+          alert(status);
+          return false;    
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+
+    <!--
+      Email keyword codes:
+      subjectbox
+      message
+    -->
+
+    <header id="top"><h1>This is the header</h1></header>
+    
+    <footer id="contact" >
+          <h1>Send an Email</h1>
+          <form method="post" action="mailto:kellysmagicglow@gmail.com" class="form contact" onsubmit="return validate(this);" autocomplete="off" enctype="text/plain">
+            <div class="row">
+              <div class="col-xs-12 col-md-12">
+                <div class="form-group">
+                  <!--<label for="message" class="sr-only">Message</label>
+                  <textarea name="message" id="message" placeholder="Send email, edit this sample sentence"></textarea>-->
+                        <br><input type="text" name="name" id="name" placeholder="Name"><br>
+                        <br><input type="text" name="email" id="email" placeholder="Email"><br>
+                        <br><input type="text" name="date" id="date" placeholder="Date"><br>
+                        
+                        <br><input type="text" name="time" id="time" placeholder="Time"><br>
+                        <br><input type="text" name="location" id="location" placeholder="Location"><br>
+                        <br><input type="text" name="phone" id="phone" placeholder="Phone Number #"><br>
+                        <br><input type="text" name="qa" placeholder="Any questions or comments?"><br>
+      
+                </div>
+              </div>
+              
+            </div> 
+            <br>
+            <button class="btn btn-default contact-submit custom-btn" type="submit">SUBMIT</button>
+          </form> 
+    </footer>
+
+
+
+
+
+<!--Name, Email, Date, Time, Location, Phone Number
+    <form action="mailto:kekbazz@gmail.com" method="post" enctype="text/plain">
+      Title: <br><input type="text" id="subjectbox"> <br>
+      Student Name:<br><input type="text" name="sname"> <br>
+      Student Subject:<br><input type="text" name="ssubject"><br>
+      <input type="submit" value="Send">
+    </form>
+
+
+    <script src="http://127.0.0.1/myjs.js"></script> 
+-->
+  </body>
+</html>
